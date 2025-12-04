@@ -49,7 +49,7 @@ export default function Navbar() {
                 ref={navRef}
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
-                transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
+                transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] as const }}
                 style={{ opacity: navOpacity }}
                 className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-500 ${isScrolled
                     ? 'glass-dark shadow-2xl shadow-gold-500/10'
@@ -150,7 +150,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, x: '100%' }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: '100%' }}
-                        transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
+                        transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] as const }}
                         className="fixed inset-0 z-[999] lg:hidden glass-dark backdrop-blur-2xl"
                     >
                         <div className="flex flex-col items-center justify-center h-full gap-8 px-8">
@@ -164,7 +164,7 @@ export default function Navbar() {
                                     transition={{
                                         delay: index * 0.1,
                                         duration: 0.5,
-                                        ease: [0.23, 1, 0.32, 1],
+                                        ease: [0.23, 1, 0.32, 1] as const,
                                     }}
                                 >
                                     <Link
