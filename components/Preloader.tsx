@@ -23,7 +23,7 @@ export default function Preloader() {
                     className="fixed inset-0 z-[10000] flex items-center justify-center bg-charcoal-950"
                     initial={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
+                    transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] as const }}
                 >
                     <div className="relative">
                         {/* Logo Animation */}
@@ -31,7 +31,7 @@ export default function Preloader() {
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 1.2, opacity: 0 }}
-                            transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
+                            transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] as const }}
                             className="relative w-32 h-32 md:w-40 md:h-40"
                         >
                             <Image
